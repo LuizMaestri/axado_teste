@@ -82,14 +82,19 @@ devem ser números inteiros ou décimais'''
     if '/' in argv[0]:
         new_len = argv[0].find('axado.py')
         path = argv[0][:new_len]
+    exist_route = False
     for line in read_file(path + ROTA_CSV, ','):
         if read_rotas_file(line):
             calculate(line, path + PRECO_CSV, ',')
+            exist_route = True
             break
-    for line in read_file(path + ROTA_TSV, '\t'):
-        if read_rotas_file(line):
-            calculate(line, path + PRECO_TSV, '\t')
-            break
+    if exist_route:
+        for line in read_file(path + ROTA_TSV, '\t'):
+            if read_rotas_file(line):
+                calculate(line, path + PRECO_TSV, '\t')
+                break
+    else:
+        print 'Rota inexistente'
 
 
 if __name__ == "__main__":
