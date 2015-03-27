@@ -54,7 +54,7 @@ def total_price(taxs):
         subtotal = subtotal + customhouse
         icms_denominator = 100 - int(taxs[3])
         total = 100*subtotal/icms_denominator
-        print 'tabela: %s, %.2f' % (taxs[1], total)
+        print 'tabela2: %s, %.2f' % (taxs[1], total)
             
 
 
