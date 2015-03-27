@@ -1,4 +1,4 @@
-# EXPLICAÇÂO DO CÓDIGO
+# EXPLICAÇÃO DO CÓDIGO
 
 def read_file(filename, delimiter)
 Abre o aquirvo csv ou tsv e devolve linha por linha(gerador) com um split pelo delimitado setado
